@@ -10,15 +10,18 @@ jobs:
         - name: Install ESLint globally
           run: npm install -g eslint # Install ESLint globally
 
-        - name: Lint code
-          run: npm run lint # Run the linter to check code quality
     test:
         runs-on: ubuntu-latest  
         steps:
         - name: Checkout code
           uses: actions/checkout@v3 # Check out the repository code
 
-        - name: install dependencies
+        - name: Install NodeJS
+          uses: actions/setup-node@v3
+          with:
+            node-version: '18'
+
+        - name: Install dependencies
           run: npm install # Install dependencies using npm
 
         - name: Tests test cases

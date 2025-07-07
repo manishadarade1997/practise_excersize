@@ -10,6 +10,11 @@ jobs:
       - name: Install ESLint globally
         run: npm install -g eslint # Install ESLint globally
 
+      - name: Install NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
       - name: Install dependencies
         run: npm install # Install dependencies using npm
 
