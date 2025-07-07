@@ -1,0 +1,15 @@
+{
+  "exampleKey": "exampleValue",
+  "testData": [
+    {
+      "id": 1,
+      "name": "Test User",
+      "email": "testuser@example.com"
+    },
+    {
+      "id": 2,
+      "name": "Another User",
+      "email": "anotheruser@example.com"
+    }
+  ]
+}

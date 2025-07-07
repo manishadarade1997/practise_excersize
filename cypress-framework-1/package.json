@@ -1,0 +1,16 @@
+{
+  "name": "cypress-framework",
+  "version": "1.0.0",
+  "description": "A Cypress framework for end-to-end testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "test:headless": "cypress run"
+  },
+  "dependencies": {
+    "cypress": "^12.0.0"
+  },
+  "devDependencies": {},
+  "author": "Your Name",
+  "license": "MIT"
+}
