@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "cypress": "^14.5.0",
+    "cypress": "^14.5.1",
     "eslint": "8.0.0"
   },
   "name": "practise_excersize",
@@ -19,5 +19,5 @@
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "## Overview This project is a Cypress framework designed for end-to-end testing of web applications. It provides a structured approach to writing tests, organizing test data, and extending Cypress functionality through custom commands and page objects."
 }
