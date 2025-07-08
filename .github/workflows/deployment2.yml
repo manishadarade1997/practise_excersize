@@ -11,6 +11,7 @@ jobs:
           run: npm install -g eslint # Install ESLint globally
 
     test:
+        needs: lint # Ensure linting is done before testing
         runs-on: ubuntu-latest  
         steps:
         - name: Checkout code
@@ -31,6 +32,7 @@ jobs:
           run: npx cypress run # Run tests to ensure code correctness
 
     deploy:
+        needs: test # Ensure tests are successful before deployment
         runs-on: ubuntu-latest
         steps:
         - name: Checkout code
