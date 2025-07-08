@@ -1,0 +1,10 @@
+name: Handle Issues
+on: issues
+jobs:
+    outpu-info:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Output event details
+              # This step outputs the details of the issue event to the console
+              # Outputs the entire event data
+              run: echo "Issue Event: ${{ toJson(github.event) }}"
