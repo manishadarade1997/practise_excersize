@@ -1,0 +1,11 @@
+name: Deployment Workflow2
+on: push
+jobs:
+    lint:
+        runs-on: ubuntu-latest
+        steps:
+        - name: Checkout code
+          uses: actions/checkout@v3 # Check out the repository code
+
+        - name: Install ESLint globally
+          run: npm install -g eslint # Install ESLint globally
