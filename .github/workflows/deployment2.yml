@@ -56,15 +56,21 @@ jobs:
         - name: upload artifacts
           uses: actions/upload-artifact@v4
           with:
-            name: my-artifact
-            path: |
-              dist
-              dist/my-own-artifacts/*
+            name: dist-files # Name of the artifact to be uploaded
+            path: dist # Upload the build artifacts to be used in the deployment step
+            # If you want to upload specific files or directories, you can specify them like this:
+            # path: |
+            #   dist
+            #   dist/my-own-artifacts/*
 
     deploy:
         needs: build # Ensure tests are successful before deployment
         runs-on: ubuntu-latest
         steps:
+        - name: download artifacts
+          uses: actions/download-artifact@v4
+          with:
+            name: dist-files # Download the artifacts from the previous step
         - name: Deploy to production
           run: echo "Deploying to production..." # Placeholder for deployment step
 
