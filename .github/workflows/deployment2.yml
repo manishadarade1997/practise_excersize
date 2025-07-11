@@ -51,7 +51,7 @@ jobs:
           run: npm run build # Build the project using npm script
 
         - name: upload artifacts
-          uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v4
           with:
             name: my-artifact
             path: |
@@ -59,9 +59,9 @@ jobs:
               dist/my-own-artifacts/*
 
     deploy:
-        needs: test # Ensure tests are successful before deployment
+        needs: build # Ensure tests are successful before deployment
         runs-on: ubuntu-latest
         steps:
         - name: Deploy to production
           run: echo "Deploying to production..." # Placeholder for deployment step
-        
+
