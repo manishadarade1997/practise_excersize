@@ -47,6 +47,9 @@ jobs:
         - name: install dependencies
           run: npm install # Install dependencies using npm
 
+        - name: Fix Vite binary permissions (if needed)
+          run: chmod +x ./node_modules/.bin/vite || true # Ensure Vite binary has execute permissions
+        
         - name: Build project
           run: npm run build # Build the project using npm script
 
