@@ -1,8 +1,12 @@
 name: Deployment Workflow2
 on: push
+env: 
+  DAY_OF_WEEK: Monday # Environment variable to store the day of the week
 jobs:
     lint:
         runs-on: ubuntu-latest
+        env:
+          Greeting: "Hello, World!" # Environment variable to greet the user
         steps:
         - name: Checkout code
           uses: actions/checkout@v3 # Check out the repository code
